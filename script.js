@@ -31,11 +31,12 @@ app.init = function() {
         $(this)[0].reset();
     });
     // sortable with jQuery UI
-    
-}
-
-
-
+    $('ul').sortable(
+        {
+        connectWith: ".connect"
+        }
+    );
+};
 
 $(function() {
     console.log("linked");
