@@ -16,6 +16,20 @@ app.addHeading = function(item) {
     app.ul.append(groceryHeader);
 };
 
+//function for Submitting the form
+app.init = function() {
+    $('form').on('submit', function(e) {
+        e.preventDefault(); //stops the form from submitting and refreshing page
+        const item = $('input[type=text]').val(); //make input go into form
+        if ($('input[type=checkbox]:checked').length>0){
+            app.addHeading(item);
+        }else{
+            app.addItem(item);
+        }
+    })
+}
+
+
 
 
 $(function() {
