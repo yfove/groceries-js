@@ -26,7 +26,12 @@ app.init = function() {
         }else{
             app.addItem(item);
         }
-    })
+
+        //clear input
+        $(this)[0].reset();
+    });
+    // sortable with jQuery UI
+    
 }
 
 
@@ -36,5 +41,6 @@ $(function() {
     console.log("linked");
     // app.addItem('veg'); //test addItem function
     // app.addHeading('Vegan'); //test addHeading function
+    app.init();
 });
 
