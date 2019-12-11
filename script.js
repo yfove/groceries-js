@@ -10,11 +10,17 @@ app.addItem = function(item){
     app.ul.append(groceryItem);
 }
 
-//new function for adding headings
+//function for adding headings
+app.addHeading = function(item) {
+    const groceryHeader = ` <li class="heading">${item}</li>`;
+    app.ul.append(groceryHeader);
+};
+
 
 
 $(function() {
     console.log("linked");
     // app.addItem('veg'); //test addItem function
+    // app.addHeading('Vegan'); //test addHeading function
 });
 
